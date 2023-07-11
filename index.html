@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCIObuQgyE6teJwCWuMzo8oO1cFijzXdZQ",
+            authDomain: "cvmakerabrar.firebaseapp.com",
+            databaseURL: "https://cvmakerabrar-default-rtdb.firebaseio.com",
+            projectId: "cvmakerabrar",
+            storageBucket: "cvmakerabrar.appspot.com",
+            messagingSenderId: "547049952068",
+            appId: "1:547049952068:web:52efe31da082dc23c7fd11",
+            measurementId: "G-JSV2Y30V8V"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <title>Detail Information</title>
+</head>
+
+<body>
+    <header>
+        <div class="logoContainer">
+            <img id="logo" src="./images/logo.jpg" alt="Logo Not Found">
+        </div>
+    </header>
+    <div id="mainContainer">
+        <h1>User Survey</h1>
+        <div id="message" class="alertMessage">
+            <span>Survey form submitted successfully</span>
+        </div>
+        <hr>
+        <form action="#">
+            <label for="Name" class="form-label">Name</label><br>
+            <input type="text" id="name" class="form-control">
+            <br>
+
+            <label for="emailUser" class="form-label">Email</label><br>
+            <input type="text" id="emailuser" class="form-control">
+            <br>
+
+            <label for="contNumber" class="form-label">Contact Number</label><br>
+            <input type="text" id="contactNum" class="form-control" aria-labelledby="passwordHelpBlock">
+            <br>
+
+            <label for="PortfolioUrl" class="form-label">portfolio Url</label><br>
+            <input type="text" id="porturl" class="form-control" aria-labelledby="passwordHelpBlock">
+            <br>
+
+            <label for="summary" class="form-label">Summary</label><br>
+            <input type="text" id="summaryUser" class="form-control" aria-labelledby="passwordHelpBlock">
+            <br>
+
+            <label for="skils" class="form-label">Skills</label><br>
+            <textarea class="form-control" id="skilltext" rows="3"></textarea>
+            <br>
+
+            <label for="Education" class="form-label">Education</label><br>
+            <textarea class="form-control" id="educationtext" rows="3"></textarea>
+            <br>
+
+            <label for="preEducation" class="form-label">Previous Education</label><br>
+            <input type="text" id="preEduc" class="form-control" aria-labelledby="passwordHelpBlock">
+            <br>
+
+            <label for="Ceducation" class="form-label">Current Education</label>
+            <input type="text" id="cEduca" class="form-control" aria-labelledby="passwordHelpBlock">
+            <br>
+
+            <label for="certificate" class="form-label">Certificate</label><br>
+            <textarea class="form-control" id="certift" rows="3"></textarea>
+            <br>
+
+            <label for="imageUpload" class="form-label">Image Upload</label><br>
+            <input type="file" id="imgupload" class="form-control" aria-labelledby="passwordHelpBlock">
+            <br>
+            <button type="button" class="btn btn-primary" onclick="saveData()">SUBMIT</button>
+        </form>
+    </div>
+
+    <!-- footer Section  -->
+    <footer>
+        <h3>&copy By Abrar ul Hassan</h3>
+    </footer>
+
+    <form id="myForm">
+        <input type="text" id="text1" placeholder="Text 1"><br>
+        <input type="text" id="text2" placeholder="Text 2"><br>
+        <input type="text" id="text3" placeholder="Text 3"><br>
+        <input type="file" id="imageInput"><br>
+        <button type="submit">Submit</button>
+      </form>
+
+
+
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
